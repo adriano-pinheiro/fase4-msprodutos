@@ -1,6 +1,7 @@
 package br.com.techchallenge4.msprodutos.controller;
 
 import br.com.techchallenge4.msprodutos.model.Produto;
+import br.com.techchallenge4.msprodutos.model.ProdutoEstoque;
 import br.com.techchallenge4.msprodutos.service.ProdutoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -40,9 +41,8 @@ public class ProdutoController {
         produtoService.excluirProduto(produtoId);
     }
 
-    @PutMapping("/atualizar/estoque/{produtoId}/{quantidade}")
-    public Produto atualizarEstoque(
-            @PathVariable Long produtoId, @PathVariable Long quantidade) {
-        return produtoService.atualizarEstoque(produtoId,quantidade);
+    @PutMapping("/atualizar/estoque")
+    public List<ProdutoEstoque> atualizarEstoque(@RequestBody List<ProdutoEstoque> produtoEstoques) {
+        return produtoService.atualizarEstoque(produtoEstoques);
     }
 }
