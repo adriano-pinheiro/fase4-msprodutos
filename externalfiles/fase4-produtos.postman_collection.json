@@ -73,7 +73,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "",
+							"raw": "[\r\n    {\r\n        \"id\": 1,\r\n        \"qtdEstoque\": 2\r\n    },\r\n    {\r\n        \"id\": 2,\r\n        \"qtdEstoque\": 5\r\n    },\r\n    {\r\n        \"id\": 4,\r\n        \"qtdEstoque\": 10\r\n    }\r\n]",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -81,7 +81,7 @@
 							}
 						},
 						"url": {
-							"raw": "{{host}}/api/v1/produtos/atualizar/estoque/3/499",
+							"raw": "{{host}}/api/v1/produtos/atualizar/estoque",
 							"host": [
 								"{{host}}"
 							],
@@ -90,9 +90,7 @@
 								"v1",
 								"produtos",
 								"atualizar",
-								"estoque",
-								"3",
-								"499"
+								"estoque"
 							]
 						}
 					},
