@@ -28,6 +28,7 @@
 3. GET `/api/v1/produtos/{produtoId}` - para ver detalhes de um produto
 4. PUT `/api/v1/produtos/{produtoId}` - para atualizar um produto
 5. DELETE `/api/v1/produtos/{produtoId}` - para excluir um produto
+6. PUT `/api/v1/produtos/atualizar/estoque` - para atualizar o estoque de uma lista de produtos
 
 ### Arquivo para importação da collection no Postman com os payloads das requisições:
 
