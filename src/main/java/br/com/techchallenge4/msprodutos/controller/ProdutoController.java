@@ -1,5 +1,6 @@
 package br.com.techchallenge4.msprodutos.controller;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -61,6 +62,13 @@ public class ProdutoController {
     public ResponseEntity<Void> excluirProduto(@PathVariable Long id) {
     	produtoService.deleteProduto(id);
         return ResponseEntity.noContent().build();
+    }
+    
+    @PutMapping("/atualizar/estoque")
+    public List<ProdutoEstoque> atualizarEstoque(@RequestBody List<ProdutoEstoque> produtoEstoques) {
+    	List<ProdutoEstoque> produtoEstoqueAtualizados = new ArrayList<>(); // TODO: retirar
+    	return produtoEstoqueAtualizados;
+        //return produtoService.atualizarEstoque(produtoEstoques);
     }
 
  
