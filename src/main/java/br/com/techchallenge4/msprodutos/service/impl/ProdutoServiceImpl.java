@@ -5,12 +5,9 @@ import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;
-
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
-
 import br.com.techchallenge4.msprodutos.controller.exception.ControllerNotFoundException;
 import br.com.techchallenge4.msprodutos.dto.ProdutoDTO;
 import br.com.techchallenge4.msprodutos.model.Produto;
@@ -24,7 +21,6 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class ProdutoServiceImpl implements ProdutoService {
 
-    @Autowired
     private final ProdutoRepository produtoRepository;
 
     @Override
@@ -120,7 +116,6 @@ public class ProdutoServiceImpl implements ProdutoService {
             }
         }
 
-        return  produtoEstoqueAtualizados;    	
-    	//return new ArrayList<>(); // TODO: retirar
+        return  produtoEstoqueAtualizados;
     }
 }

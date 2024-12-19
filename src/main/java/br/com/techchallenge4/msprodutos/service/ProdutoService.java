@@ -4,8 +4,6 @@ import java.util.List;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import org.springframework.web.bind.annotation.RequestBody;
-
 import br.com.techchallenge4.msprodutos.dto.ProdutoDTO;
 import br.com.techchallenge4.msprodutos.model.Produto;
 import br.com.techchallenge4.msprodutos.model.ProdutoEstoque;

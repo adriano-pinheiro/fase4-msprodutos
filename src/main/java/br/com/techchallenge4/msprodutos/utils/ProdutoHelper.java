@@ -6,6 +6,9 @@ import java.math.BigInteger;
 
 public abstract class ProdutoHelper {
 
+    protected ProdutoHelper() {
+    }
+
     public static ProdutoDTO criarProduto(){
         return new ProdutoDTO(null,
                 "Produto 1",
