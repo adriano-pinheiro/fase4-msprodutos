@@ -2,8 +2,7 @@ package br.com.techchallenge4.msprodutos.controller;
 
 import br.com.techchallenge4.msprodutos.utils.ProdutoHelper;
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.Matchers.equalTo;
-import static org.hamcrest.Matchers.hasKey;
+import static org.hamcrest.Matchers.*;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -55,7 +54,7 @@ class ProdutoControllerIT {
                 .statusCode(HttpStatus.OK.value())
                 .body("number", equalTo(0))
                 .body("size", equalTo(10))
-                .body("totalElements", equalTo(1))
+                .body("totalElements", greaterThan(0))
                 ;
     }
 

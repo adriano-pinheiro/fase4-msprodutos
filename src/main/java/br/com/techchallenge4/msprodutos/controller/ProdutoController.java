@@ -1,9 +1,6 @@
 package br.com.techchallenge4.msprodutos.controller;
 
-import java.util.ArrayList;
 import java.util.List;
-
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
@@ -29,7 +26,6 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class ProdutoController {
 
-    @Autowired
     private final ProdutoService produtoService;
 
     @GetMapping
@@ -66,9 +62,7 @@ public class ProdutoController {
     
     @PutMapping("/atualizar/estoque")
     public List<ProdutoEstoque> atualizarEstoque(@RequestBody List<ProdutoEstoque> produtoEstoques) {
-    	List<ProdutoEstoque> produtoEstoqueAtualizados = new ArrayList<>(); // TODO: retirar
-    	return produtoEstoqueAtualizados;
-        //return produtoService.atualizarEstoque(produtoEstoques);
+        return produtoService.atualizarEstoque(produtoEstoques);
     }
 
  
